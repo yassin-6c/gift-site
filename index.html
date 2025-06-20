@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Surprise Gift</title>
+  <style>
+    body {
+      background: #fff5fb;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #gift {
+      width: 200px;
+      height: 200px;
+      background-image: url('https://i.imgur.com/POKBWFa.png');
+      background-size: cover;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    #gift:hover {
+      transform: scale(1.05);
+    }
+    #message {
+      display: none;
+      margin-top: 30px;
+      font-size: 24px;
+      color: #e91e63;
+    }
+    #animal {
+      display: none;
+      margin-top: 20px;
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click the Gift to Open!</h1>
+  <div id="gift"></div>
+
+  <div id="message">💖 You are loved! Dare: Dance like nobody's watching 💃</div>
+  <img id="animal" src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Dancing Animal">
+
+  <audio id="song" src="https://files.catbox.moe/iknzxh.mp3"></audio>
+
+  <script>
+    const gift = document.getElementById('gift');
+    const message = document.getElementById('message');
+    const animal = document.getElementById('animal');
+    const song = document.getElementById('song');
+
+    gift.onclick = () => {
+      gift.style.display = 'none';
+      message.style.display = 'block';
+      animal.style.display = 'block';
+      song.play();
+    };
+  </script>
+
+</body>
+</html>
